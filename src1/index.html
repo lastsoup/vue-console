@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>anUI</title>
+</head>
+<body>
+    <div id="app" class="page" :class="[$route.path =='/404' ? 'erro' : '']">
+        <div class="top">
+        <h1><i class="iconfont">&#xe601;</i></h1>
+        <!-- <input :value="$route.path"/> -->
+        <div>
+            <input id="firstTitle" type="hidden" :value="$route.meta.title" />
+            <input id="firstSrc" type="hidden" :value="$route.meta.src" />
+          <!-- 使用 router-link 组件来导航. -->
+          <!-- 通过传入 `to` 属性指定链接. -->
+          <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+          <!-- <router-link :class="[$route.meta.active ==='home'? 'router-link-active' : '']" to="/" exact>首页</router-link>
+          <router-link :class="[$route.meta.active ==='demo'? 'router-link-active' : '']"  to="/demo/StaticTables">anUI Demo</router-link>
+          <router-link :class="[$route.meta.active ==='plugins'? 'router-link-active' : '']" to="/plugins/base">anUI 插件</router-link> -->
+          <router-link exact v-if="item.meta&&item.path!='/'" v-for="item in $route.query.head" :class="[$route.meta.active ===item.meta.active ? 'router-link-active' : '']"  :to="{path:item.default}" >
+              {{item.meta.title}}
+          </router-link>
+          <!-- <a id="checkSSL"  target="_blank" style="border:dashed 1px #fff;color:red;text-decoration: underline;cursor: pointer;">SSL证书检测</a> -->
+        </div>
+       </div>
+        <!-- 路由出口 -->
+        <!-- 路由匹配到的组件将渲染在这里 -->
+        <router-view></router-view>
+      </div>
+    </body>
+    <script>
+    </script>
+</html>
