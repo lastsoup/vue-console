@@ -1,9 +1,10 @@
 /*webpack入口文件*/
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import './assets/base.css';
-import './assets/main.css';
-
+import './assets/bootstrap/css/bootstrap.css';
+import './assets/dist/css/AdminLTE.css';
+import './assets/dist/css/skins/all-skins.min.css';
+import './assets/dist/css/skin.css';
 
 /*左侧菜单栏 */
 import menu from './components/menu.vue';

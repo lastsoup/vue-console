@@ -1,37 +1,56 @@
 <template>
   <div class="main">
-  <!-- :to="{path:i.to?i.to:'javascript:;'}" :class="[i.disabled]"-->
-  <div class="left">
-      <ul class="nav">
-          <li  v-for="item in $route.query.menu" class="active"><a href="javascript:;">{{item.title}}</a>
-             <ul class="nav">
-                 <li v-for="i in item.children">
-                     <router-link v-if="i.disabled" :to="{path:i.path?i.path:'javascript:;'}"  class="disabled" event="">{{i.title}}</router-link>
-                     <router-link v-else :to="{path:i.path?i.path:'javascript:;'}" >{{i.title}}</router-link>
-                 </li>
-             </ul>
-          </li>
-      </ul>
-   </div>
-   <div class="content"  v-if="$route.params.showtabs">
-    <div id="tabs" class="easyui-tabs"  fit="true" border="false" >
-    <div id="mm" class="easyui-menu cs-tab-menu" style="display: none;">
-        <div id="mm-tabupdate">刷新</div>
-        <div class="menu-sep"></div>
-        <div id="mm-tabclose">关闭</div>
-        <div id="mm-tabcloseother">关闭其他</div>
-        <div id="mm-tabcloseall">关闭全部</div>
-    </div>
-    </div>
-    <!-- 路由出口 -->
-    <!-- 路由匹配到的组件将渲染在这里 -->
-    <router-view></router-view>
-   </div>
-    <div class="content" v-else>
-        <!-- <div style="width: 100%; height: 100%; overflow: hidden;"><iframe id='iframeId' src="http://www.0non0.com" frameborder="no" scrolling="auto" allowtransparency="true" width="100%" height="100%"></iframe></div> -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
-        <router-view></router-view>
-    </div>
+       <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="搜索...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="iconfont icon-sousuo"></i></button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+             <li  v-for="item in $route.query.menu" class="treeview">
+               <a href="javascript:;">
+                <i class="iconfont icon-circle"></i><span>{{item.title}}</span>
+                <i class="iconfont icon-zuo pull-right"></i>
+               </a>
+                <ul class="treeview-menu">
+                    <li v-for="i in item.children">
+                        <router-link v-if="i.disabled" :to="{path:i.path?i.path:'javascript:;'}"  class="disabled" event="">{{i.title}}</router-link>
+                        <router-link v-else :to="{path:i.path?i.path:'javascript:;'}" >{{i.title}}</router-link>
+                    </li>
+                </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            <span id="mainHeadName"></span>
+            <small id="mainHeadContent"></small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>业务</a></li>
+            <li class="active" id="mainHeadActive"></li>
+          </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content" id="maincontent">
+          <router-view></router-view>
+        </section>
+      </div><!-- /.content-wrapper -->
   </div>
 </template>
 <script>
@@ -50,16 +69,16 @@
             }
         },
          mounted:function(){
-            if(!this.$route.params.showtabs)
-                this.goLink()
+            // if(!this.$route.params.showtabs)
+                //this.goLink()
          },
          watch: {
           // 如果路由有变化，会再次执行该方法
           "$route"(to, from){
-               if(this.$route.params.showtabs)
-                this.addTab();
-            else
-                this.goLink()
+            //    if(this.$route.params.showtabs)
+            //     this.addTab();
+            // else
+            //     this.goLink()
           }
         }
     }
