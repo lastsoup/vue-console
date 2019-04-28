@@ -16,7 +16,7 @@
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-             <li  v-for="item in $route.query.menu" class="treeview">
+             <li  v-for="item in $route.query.menu" :class="['treeview '+($route.meta.group==item.title?'active':'')]">
                <a href="javascript:;">
                 <i class="iconfont icon-circle"></i><span>{{item.title}}</span>
                 <i class="iconfont icon-zuo pull-right"></i>
