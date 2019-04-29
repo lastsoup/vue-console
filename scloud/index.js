@@ -3,8 +3,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import '../assets/bootstrap/css/bootstrap.css';
 import '../assets/dist/css/AdminLTE.css';
-import '../assets/dist/css/skins/all-skins.min.css';
-import '../assets/dist/css/skin.css';
+import '../assets/dist/css/skins/all-skins.css';
+import '../assets/dist/css/qqskin.css';
 
 /*左侧菜单栏 */
 import menu from './components/menu.vue';
@@ -416,15 +416,14 @@ const menuRoutes=function(arr,active){
 const routes = [
   { 
     path: '/',
-    redirect:'/demo/StaticTables',
-    meta:{title:"首页",active:"home"}
+    redirect:'/home'
   },
-  // { 
-  //   path: '/home', 
-  //   default:'/home',
-  //   meta:{title:"Home（首页）",active:"home"}, 
-  //   component:home 
-  // },
+  { 
+    path: '/home', 
+    default:'/home',
+    // meta:{title:"总览",active:"home"}, 
+    component:home 
+  },
   { 
     path: '/404', 
     default:'/404',
@@ -433,40 +432,30 @@ const routes = [
   { 
     path: '/demo', 
     default:'/demo/StaticTables',
-    meta:{title:"Demo（教程）",active:"demo"}, 
+    meta:{title:"网站备案",active:"demo"}, 
     component: menu,
     children: menuRoutes(menuArry.demo,"demo")
   },
   { 
     path: '/plugins', 
     default:'/plugins/base',
-    meta:{title:"Plugins（插件）",active:"plugins"}, 
+    meta:{title:"对象存储",active:"plugins"}, 
     component: menu,
     children: menuRoutes(menuArry.plugins,"plugins")
   },
   { 
     path: '/extend', 
     default:'/extend/mobile1',
-    meta:{title:"Extension（扩展）",active:"extend"}, 
+    meta:{title:"文件存储",active:"extend"}, 
     component: menu,
     children: menuRoutes(menuArry.extend,"extend")
   },
   { 
     path: '/library', 
     default:'/library/blog',
-    meta:{title:"Library（藏书阁）",active:"library"}, 
+    meta:{title:"私有网络",active:"library"}, 
     component: menu,
     children: menuRoutes(menuArry.library,"library")
-  },
-  { 
-    path: '/download', 
-    meta:{title:"Donwload（下载）",active:"download"}, 
-    component: menu,
-    children: menuRoutes(null,"download")
-  },
-  { 
-    path: '/docs', 
-    meta:{title:"Document（帮助文档）",active:"docs"}
   }
 ]
 

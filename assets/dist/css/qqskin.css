@@ -142,11 +142,29 @@ body {
   height: 50px;
   line-height: 50px;
   float: left;
+  margin: 0 10px;
 }
 
 .navbar .vue-menu a.sidebar-toggle{
   width: auto;
-  padding: 0 5px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+a.router-link-active {
+  font-weight: 700;
+  color: #ab46bc;
+}
+
+.treeview-menu>li>a.router-link-active {
+  color: #ab46bc;
+  font-weight: bold;
+}
+
+.main-header .navbar .sidebar-link {
+  width:auto;
+  font-size: 14px;
+  padding: 0 20px;
 }
 
 @font-face {
@@ -179,12 +197,3 @@ a.disabled {
   display: block;
 }
 
-a.router-link-active {
-  font-weight: 700;
-  color: #ab46bc;
-}
-
-.treeview-menu>li>a.router-link-active {
-  color: #ab46bc;
-  font-weight: bold;
-}

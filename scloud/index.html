@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>BootStrap</title>
+    <title>腾讯云</title>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_749083_8tkj9jsnc4.css" />
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-cloud sidebar-mini">
     <div id="app" class="wrapper">
       <header class="main-header">
         <!-- Logo -->
@@ -15,7 +15,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"> <i class="iconyuan">&#xe601;</i></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>CONSOLE</b></span>
+          <span class="logo-lg">腾讯云</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -23,8 +23,10 @@
           <a href="#" class="sidebar-toggle iconfont icon-liebiao1" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
           </a>
+          <router-link class="sidebar-toggle sidebar-link" to="/home" >总览 </router-link>
           <!-- vue路由 -->
           <div class="vue-menu">
+          <!-- <router-link class="sidebar-toggles" to="/home" >总览 </router-link> -->
           <router-link exact v-if="item.meta&&item.path!='/'" v-for="item in $route.query.head" :class="[$route.meta.active ===item.meta.active ? 'sidebar-toggle router-link-active' : 'sidebar-toggle']"  :to="{path:item.default}" >
             {{item.meta.title}}
           </router-link>
@@ -131,15 +133,8 @@
           </div>
         </nav>
       </header>
-      <!-- Left side column. contains the logo and sidebar -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
+      <!-- 路由匹配到的组件将渲染在这里 -->
       <router-view></router-view>
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Ananas Studio</a>.</strong> All rights reserved.
-      </footer>
 
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
@@ -152,7 +147,8 @@
         </div>
       </aside>
       <div class="control-sidebar-bg"></div>
-    </div><!-- ./wrapper --> 
+    </div>
+    <div class="top-alert" id="topAlert" style="z-index: 1100;margin-left: -200px;"><span id="flashMsg" class="top-alert-icon-doing fade-out">正在加载…</span></div>
     <script type="text/javascript" src="https://lastsoup.github.io/themes/nifty/js/jquery-2.2.4.min.js"></script>
     <script src="assets/bootstrap/bootstrap.js"></script>
     <script src="assets/dist/js/app.js"></script>

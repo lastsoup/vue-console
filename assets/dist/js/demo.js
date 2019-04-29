@@ -14,6 +14,7 @@ $(function () {
    * @type Array
    */
   var my_skins = [
+    "skin-cloud",
     "skin-blue",
     "skin-black",
     "skin-red",
@@ -115,11 +116,11 @@ $(function () {
   skins_list.append(skin_blue);
   var skin_black =
           $("<li />", {style: "float:left; width: 33.33333%; padding: 5px;"})
-          .append("<a href='javascript:void(0);' data-skin='skin-black' style='display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)' class='clearfix full-opacity-hover'>"
+          .append("<a href='javascript:void(0);' data-skin='skin-cloud' style='display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)' class='clearfix full-opacity-hover'>"
                   + "<div style='box-shadow: 0 0 2px rgba(0,0,0,0.1)' class='clearfix'><span style='display:block; width: 20%; float: left; height: 7px; background: #fefefe;'></span><span style='display:block; width: 80%; float: left; height: 7px; background: #fefefe;'></span></div>"
                   + "<div><span style='display:block; width: 20%; float: left; height: 20px; background: #222;'></span><span style='display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;'></span></div>"
                   + "</a>"
-                  + "<p class='text-center no-margin'>Black</p>");
+                  + "<p class='text-center no-margin'>Cloud</p>");
   skins_list.append(skin_black);
   var skin_purple =
           $("<li />", {style: "float:left; width: 33.33333%; padding: 5px;"})

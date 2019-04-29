@@ -1797,3 +1797,168 @@
     border-left: 1px solid #d2d6de;
   }
 }
+
+
+
+/*
+ * Skin: Cloud
+ * -----------
+ */
+/* skin-cloud navbar */
+.skin-cloud .main-header {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.skin-cloud .main-header .navbar-toggle {
+  color: #bbb;
+}
+.skin-cloud .main-header .navbar-brand {
+  color: #bbb;
+  border-right: 1px solid #eee;
+}
+.skin-cloud .main-header > .navbar {
+  background-color: #262626;
+}
+.skin-cloud .main-header > .navbar .nav > li > a {
+  color: #bbb;
+}
+.skin-cloud .main-header > .navbar .nav > li > a:hover,
+.skin-cloud .main-header > .navbar .nav > li > a:active,
+.skin-cloud .main-header > .navbar .nav > li > a:focus,
+.skin-cloud .main-header > .navbar .nav .open > a,
+.skin-cloud .main-header > .navbar .nav .open > a:hover,
+.skin-cloud .main-header > .navbar .nav .open > a:focus,
+.skin-cloud .main-header > .navbar .nav > .active > a {
+  background: #262626;
+  color: #bbb;
+}
+
+.skin-cloud .main-header > .navbar a.router-link-active {
+  font-weight: normal;
+  color: #3d91ff;
+}
+
+.skin-cloud .main-header > .navbar .sidebar-toggle {
+  color: #bbb;
+}
+.skin-cloud .main-header > .navbar .sidebar-toggle:hover {
+  color: #3d91ff;
+}
+.skin-cloud .main-header > .navbar > .sidebar-toggle {
+  color: #bbb;
+  border-right: 1px solid #000;
+}
+.skin-cloud .main-header > .navbar .navbar-nav > li > a {
+  border-right: 1px solid #000;
+}
+.skin-cloud .main-header > .navbar .navbar-custom-menu .navbar-nav > li > a,
+.skin-cloud .main-header > .navbar .navbar-right > li > a {
+  border-left: 1px solid #000;
+  border-right-width: 0;
+}
+.skin-cloud .main-header > .logo {
+  background-color: #262626;
+  color: #bbb;
+  border-bottom: 0 solid transparent;
+  border-right: 1px solid #000;
+}
+.skin-cloud .main-header > .logo:hover {
+  color: #3d91ff;
+}
+
+
+
+@media (max-width: 767px) {
+  .skin-cloud .main-header > .logo {
+    background-color: #222222;
+    color: #ffffff;
+    border-bottom: 0 solid transparent;
+    border-right: none;
+  }
+  .skin-cloud .main-header > .logo:hover {
+    background-color: #1f1f1f;
+  }
+}
+.skin-cloud .main-header li.user-header {
+  background-color: #222;
+}
+.skin-cloud .content-header {
+  background: transparent;
+  box-shadow: none;
+}
+.skin-cloud .wrapper,
+.skin-cloud .main-sidebar,
+.skin-cloud .left-side {
+  background-color: #222d32;
+}
+.skin-cloud .user-panel > .info,
+.skin-cloud .user-panel > .info > a {
+  color: #fff;
+}
+.skin-cloud .sidebar-menu > li.header {
+  color: #4b646f;
+  background: #1a2226;
+}
+.skin-cloud .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+}
+.skin-cloud .sidebar-menu > li:hover > a,
+.skin-cloud .sidebar-menu > li.active > a {
+  color: #ffffff;
+  background: #1e282c;
+  border-left-color: #ffffff;
+}
+.skin-cloud .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #2c3b41;
+}
+.skin-cloud .sidebar a {
+  color: #b8c7ce;
+}
+.skin-cloud .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-cloud .treeview-menu > li > a {
+  color: #8aa4af;
+}
+.skin-cloud .treeview-menu > li.active > a,
+.skin-cloud .treeview-menu > li > a:hover {
+  color: #ffffff;
+}
+.skin-cloud .sidebar-form {
+  border-radius: 3px;
+  border: 1px solid #374850;
+  margin: 10px 10px;
+}
+.skin-cloud .sidebar-form input[type="text"],
+.skin-cloud .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #374850;
+  border: 1px solid transparent;
+  height: 35px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.skin-cloud .sidebar-form input[type="text"] {
+  color: #666;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+}
+.skin-cloud .sidebar-form input[type="text"]:focus,
+.skin-cloud .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #fff;
+  color: #666;
+}
+.skin-cloud .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left-color: #fff;
+}
+.skin-cloud .sidebar-form .btn {
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}

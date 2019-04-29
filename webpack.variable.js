@@ -26,14 +26,7 @@ VARIABLE.isProduction = process.env.NODE_ENV === 'production' ? true : false;
  */
 VARIABLE.buildDir = VARIABLE.isProduction ? "./build" : "./dev";
 
-/**
- * 入口文件路径配置
- * @type {string | array | object}
- */
-VARIABLE.entry = {
-    // 业务代码
-    main: [VARIABLE.getPath("src/index.js")]
-};
+
 
 /**
  * 输出文件路径配置
@@ -56,6 +49,15 @@ VARIABLE.output = {
 };
 
 /**
+ * 入口文件路径配置
+ * @type {string | array | object}
+ */
+VARIABLE.entry = {
+    // 业务代码
+    main: [VARIABLE.getPath("scloud/index.js")]
+};
+
+/**
  * html插件配置
  * @type {{title: string, filename, template, dllJs: string}}
  * @prop title      html中的title标签内容
@@ -65,7 +67,7 @@ VARIABLE.output = {
  */
 VARIABLE.htmlPlugin = {
     filename: VARIABLE.getPath(VARIABLE.buildDir + "/index.html"),
-    template: VARIABLE.getPath("src/index.html")
+    template: VARIABLE.getPath("scloud/index.html")
 };
 
 module.exports = VARIABLE;
