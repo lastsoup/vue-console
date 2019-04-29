@@ -6,6 +6,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; 
 
 }
 
@@ -29,11 +31,16 @@ body {
   width: 20px;
 }
 
+.main-header {
+  font-family: Roboto,San Francisco,"Helvetica Neue",Helvetica,Arial,PingFangSC-Light,"Hiragina Sans GB","WenQuanYi Micro Hei",'microsoft yahei ui','microsoft yahei',sans-serif; 
+}
+
 .main-header .navbar .sidebar-toggle {
   width: 45px;
   text-align: center;
   height: 50px;
   line-height: 50px;
+  cursor: pointer;
 }
 
 .main-header .sidebar-toggle {
