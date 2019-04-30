@@ -1838,6 +1838,11 @@
   color: #3d91ff;
 }
 
+.skin-cloud .treeview-menu>li>a.router-link-active {
+  font-weight: 700;
+   color: #fff;
+}
+
 .skin-cloud .main-header > .navbar .sidebar-toggle {
   color: #bbb;
 }
