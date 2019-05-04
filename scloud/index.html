@@ -32,20 +32,7 @@
           </router-link>
          </div>
           <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- Messages: style can be found in dropdown.less-->
-              <!-- Notifications: style can be found in dropdown.less -->
-            
-              <li><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" title="语言切换" aria-expanded="false"><i class="fa fa-language">语言</i></a>
-                <ul class="dropdown-menu">
-                  <li class="active">
-                      <a href="javascript:;">简体中文</a>
-                  </li>
-                  <li class="">
-                      <a href="javascript:;">English</a>
-                  </li>
-              </ul>
-              </li>
+            <ul class="nav navbar-nav">    
               <!-- <li><a href="#" data-toggle="fullscreen" title="全屏"><i class="fa fa-arrows-alt">全屏</i></a></li> -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -84,10 +71,20 @@
                   </li>
                 </ul>
               </li>
+              <li><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" title="语言切换" aria-expanded="false"><i class="fa fa-language">语言</i></a>
+                <ul class="dropdown-menu">
+                  <li class="active">
+                      <a href="javascript:;">简体中文</a>
+                  </li>
+                  <li class="">
+                      <a href="javascript:;">English</a>
+                  </li>
+              </ul>
+              </li>
               <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="menu-icon" data-toggle="dropdown">
                  <i class="iconfont icon-icon_notice"></i>
-                  <span class="label label-warning">10</span>
+                  <span class="label icon_notice">10</span>
                 </a>
                 <ul class="dropdown-menu">
                   <li class="header">你有10条消息</li>
@@ -125,10 +122,10 @@
                 </ul>
               </li>
               <li>
-                  <a href="#"><i class="iconfont icon-quanping"></i></a>
+                  <a href="#" class="menu-icon" ><i class="iconfont icon-quanping"></i></a>
               </li>
               <li>
-                <a href="#" data-toggle="control-sidebar"><i class="iconfont icon-zititubiao20"></i></a>
+                <a href="#" class="menu-icon"  data-toggle="control-sidebar"><i class="iconfont icon-zititubiao20"></i></a>
               </li>
 
             </ul>

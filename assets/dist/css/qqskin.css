@@ -1,15 +1,18 @@
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; 
 
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-size: 12px;
+  -webkit-text-size-adjust:none;
+  width:100%;
+  height:100%;
+  position:absolute;
+  font-family: Roboto,San Francisco,"Helvetica Neue",Helvetica,Arial,PingFangSC-Light,"Hiragina Sans GB","WenQuanYi Micro Hei",'microsoft yahei ui','microsoft yahei',sans-serif;
+}
+
 
 .content-wrapper{
   background: #f1f4f6;
@@ -22,20 +25,23 @@ body {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 16px;
-  font-weight: 400;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  color:#888;
 
+}
+
+.icon-icon_notice{
+
+}
+
+.skin-cloud .main-header > .navbar .navbar-nav > li > a.menu-icon{
+  border-right: 0;
 }
 
 .sidebar-menu > li > a > .iconfont,.treeview-menu .iconfont{
   width: 20px;
 }
 
-.main-header {
-  font-family: Roboto,San Francisco,"Helvetica Neue",Helvetica,Arial,PingFangSC-Light,"Hiragina Sans GB","WenQuanYi Micro Hei",'microsoft yahei ui','microsoft yahei',sans-serif; 
-}
 
 .main-header .navbar .sidebar-toggle {
   width: 45px;
@@ -54,6 +60,22 @@ body {
 
 .sidebar-menu .treeview-menu > li > a {
   font-size: 12px;
+}
+
+
+.main-header .navbar .nav > li > a > .icon_notice{
+  display: inline-block;
+  vertical-align: 10px;
+  padding: 0 5px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 10px;
+  background-color: #e54545;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 9px;
+  right: 0px;
 }
 
 .treeview-menu .iconfont{
@@ -161,7 +183,6 @@ body {
 }
 
 a.router-link-active {
-  font-weight: 700;
   color: #ab46bc;
 }
 

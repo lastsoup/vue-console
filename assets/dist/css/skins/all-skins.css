@@ -1834,7 +1834,6 @@
 }
 
 .skin-cloud .main-header > .navbar a.router-link-active {
-  font-weight: normal;
   color: #3d91ff;
 }
 
@@ -1858,8 +1857,7 @@
 }
 .skin-cloud .main-header > .navbar .navbar-custom-menu .navbar-nav > li > a,
 .skin-cloud .main-header > .navbar .navbar-right > li > a {
-  border-left: 1px solid #000;
-  border-right-width: 0;
+  border-left-width: 0;
 }
 .skin-cloud .main-header > .logo {
   background-color: #262626;
@@ -1871,7 +1869,9 @@
   color: #3d91ff;
 }
 
-
+.skin-cloud .iconfont{
+  color:#888;
+}
 
 @media (max-width: 767px) {
   .skin-cloud .main-header > .logo {
