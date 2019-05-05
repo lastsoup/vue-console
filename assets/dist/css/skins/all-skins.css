@@ -1939,6 +1939,7 @@
 .skin-cloud .sidebar-menu > li.active > a .iconfont
 {
   color: #3d91ff;
+  font-weight: 700;
 }
 
 .skin-cloud .sidebar-menu > li > .treeview-menu {
