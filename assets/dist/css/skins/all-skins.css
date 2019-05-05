@@ -1845,7 +1845,7 @@
 .skin-cloud .main-header > .navbar .sidebar-toggle {
   color: #bbb;
 }
-.skin-cloud .main-header > .navbar .sidebar-toggle:hover {
+.skin-cloud .main-header > .navbar .sidebar-toggle:hover,.skin-cloud .main-header > .navbar .navbar-custom-menu .navbar-nav > li > a:hover {
   color: #3d91ff;
 }
 .skin-cloud .main-header > .navbar > .sidebar-toggle {
@@ -1873,6 +1873,23 @@
   color:#888;
 }
 
+.skin-cloud .main-header > .navbar .navbar-nav > li > a.menu-icon{
+  border-right: 0;
+  padding: 10px 9px;
+}
+
+.skin-cloud .main-header > .navbar .navbar-nav > li > a.menu-icon:hover .iconfont{
+  background-color: #404040;
+}
+
+.skin-cloud .menu-icon .iconfont{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 30px;
+}
+
 @media (max-width: 767px) {
   .skin-cloud .main-header > .logo {
     background-color: #222222;
@@ -1894,7 +1911,7 @@
 .skin-cloud .wrapper,
 .skin-cloud .main-sidebar,
 .skin-cloud .left-side {
-  background-color: #222d32;
+  background-color: #333;
 }
 .skin-cloud .user-panel > .info,
 .skin-cloud .user-panel > .info > a {
@@ -1907,24 +1924,38 @@
 .skin-cloud .sidebar-menu > li > a {
   border-left: 3px solid transparent;
 }
-.skin-cloud .sidebar-menu > li:hover > a,
-.skin-cloud .sidebar-menu > li.active > a {
+.skin-cloud .sidebar-menu > li:hover > a{
   color: #ffffff;
-  background: #1e282c;
+  background: #444;
   border-left-color: #ffffff;
 }
+
+.skin-cloud .sidebar-menu > li.active > a {
+  color: #3d91ff;
+  background: #262626;
+  border-left-color: #ffffff;
+}
+
+.skin-cloud .sidebar-menu > li.active > a .iconfont
+{
+  color: #3d91ff;
+}
+
 .skin-cloud .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
-  background: #2c3b41;
+  background: #262626;
 }
 .skin-cloud .sidebar a {
-  color: #b8c7ce;
+  color: #bbb;
+  font-size: 13px;
+  font-weight: 700;
 }
 .skin-cloud .sidebar a:hover {
   text-decoration: none;
 }
 .skin-cloud .treeview-menu > li > a {
-  color: #8aa4af;
+  color: #bbb;
+  font-weight: normal;
 }
 .skin-cloud .treeview-menu > li.active > a,
 .skin-cloud .treeview-menu > li > a:hover {
@@ -1938,7 +1969,7 @@
 .skin-cloud .sidebar-form input[type="text"],
 .skin-cloud .sidebar-form .btn {
   box-shadow: none;
-  background-color: #374850;
+  background-color: #fff;
   border: 1px solid transparent;
   height: 35px;
   -webkit-transition: all 0.3s ease-in-out;

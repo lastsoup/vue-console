@@ -4,6 +4,25 @@
   padding: 0;
 }
 
+li,ul{
+  list-style: none;
+}
+
+b, em, i {
+  font-style: normal;
+  font-weight: 400;
+}
+
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+  cursor: pointer;
+  border: 0;
+}
+
+button, input, select {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 12px;
   -webkit-text-size-adjust:none;
@@ -30,13 +49,6 @@ body {
 
 }
 
-.icon-icon_notice{
-
-}
-
-.skin-cloud .main-header > .navbar .navbar-nav > li > a.menu-icon{
-  border-right: 0;
-}
 
 .sidebar-menu > li > a > .iconfont,.treeview-menu .iconfont{
   width: 20px;
@@ -227,3 +239,83 @@ a.disabled {
   display: block;
 }
 
+
+.top-alert {
+  height: 40px;
+  left: 50%;
+  padding-top: 5px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  box-sizing: border-box;
+  min-width: 77px !important;
+  transform: translate(-50%,0);
+  margin-left: auto !important;
+}
+
+.top-alert span {
+  background-color: #fff;
+  border: 1px solid #d1d2d3;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+  padding: 0 22px 0 48px;
+  word-break: break-all;
+  word-wrap: break-word;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.top-alert-icon-doing:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/bee-v2/css/sprite/bee-201904181019.svg);
+  position: absolute;
+  top: 8px;
+  left: 22px;
+  -moz-animation: spin .6s infinite linear;
+  -webkit-animation: spin .6s infinite linear;
+  animation: spin .6s infinite linear;
+  background-position: 73.04% 28.060000000000002%;
+  background-size: 1375% 1325%;
+  background-repeat: no-repeat;
+}
+
+@-moz-keyframes spin {
+  0% {
+      -moz-transform: rotate(0)
+  }
+
+  100% {
+      -moz-transform: rotate(359deg)
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0)
+  }
+
+  100% {
+      -webkit-transform: rotate(359deg)
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0)
+  }
+
+  100% {
+      transform: rotate(359deg)
+  }
+}
+
+.wrapper{
+  background-color: #f2f2f2 !important;
+}

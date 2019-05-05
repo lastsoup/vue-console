@@ -8,8 +8,9 @@ import '../assets/dist/css/qqskin.css';
 
 /*左侧菜单栏 */
 import menu from './components/menu.vue';
+/*内容 */
 import home from './components/home.vue';
-
+import test from './components/test.vue';
 
 const menuArry={
   demo:
@@ -21,8 +22,8 @@ const menuArry={
         {
           title:"Static Tables",
           path:'StaticTables',
-          iframe:"demo/pages/demo/datagrid/StaticTables.html"
-          //component:StaticTables
+          //iframe:"demo/pages/demo/datagrid/StaticTables.html"
+          component:test
         },
         {
           title:"Data Tables",
@@ -473,7 +474,9 @@ router.beforeEach((to, from, next) => {
   to.query["menu"]=menuArry[to.meta.active];
   to.params["showtabs"]=false;
   if (to.meta.group) {
-      document.title = to.meta.group;
+      document.title = to.meta.group+" - "+to.meta.title;
+  }else{
+      document.title ='腾讯云';
   }
   console.log(to);
   next()
