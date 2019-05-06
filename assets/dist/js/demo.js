@@ -62,6 +62,14 @@ $(function () {
           + "</label>"
           //+ "<p>Activate the fixed layout. You can't use fixed and boxed layouts together</p>"
           + "</div>"
+          //Fixed layout
+          + "<div class='form-group'>"
+          + "<label class='control-sidebar-subheading'>"
+          + "<input type='checkbox' data-layout='fixed-top' class='pull-right'/> "
+          + "固定头部"
+          + "</label>"
+          //+ "<p>Activate the fixed layout. You can't use fixed and boxed layouts together</p>"
+          + "</div>"
           //Boxed layout
           + "<div class='form-group'>"
           + "<label class='control-sidebar-subheading'>"
@@ -230,6 +238,7 @@ $(function () {
       AdminLTE.pushMenu.expandOnHover();
       AdminLTE.layout.activate();
     }
+
     AdminLTE.controlSidebar._fix($(".control-sidebar-bg"));
     AdminLTE.controlSidebar._fix($(".control-sidebar"));
   }
@@ -324,6 +333,17 @@ $(function () {
       if (!$('body').hasClass('sidebar-collapse'))
         $("[data-layout='sidebar-collapse']").click();
     });
+
+    $(document).on('click', "[data-toggle='fullscreen']", function () {
+      var doc = document.documentElement;
+      if ($(document.body).hasClass("full-screen")) {
+          $(document.body).removeClass("full-screen");
+          document.exitFullscreen ? document.exitFullscreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitExitFullscreen && document.webkitExitFullscreen();
+      } else {
+          $(document.body).addClass("full-screen");
+          doc.requestFullscreen ? doc.requestFullscreen() : doc.mozRequestFullScreen ? doc.mozRequestFullScreen() : doc.webkitRequestFullscreen ? doc.webkitRequestFullscreen() : doc.msRequestFullscreen && doc.msRequestFullscreen();
+      }
+  });
 
     // Reset options
     if ($('body').hasClass('fixed')) {

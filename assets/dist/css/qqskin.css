@@ -32,6 +32,38 @@ body {
   font-family: Roboto,San Francisco,"Helvetica Neue",Helvetica,Arial,PingFangSC-Light,"Hiragina Sans GB","WenQuanYi Micro Hei",'microsoft yahei ui','microsoft yahei',sans-serif;
 }
 
+.fixed-top{
+  width: 100%;
+  height: 100%;
+}
+
+
+.fixed-top .home-main,.fixed-top .main{
+  width:100%;
+  top: 50px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.fixed-top .main-sidebar,.fixed-top .content-wrapper{
+  padding-top:0;
+}
+
+.fixed-top.fixed .home-main,.fixed-top.fixed .main{
+  top: 0px;
+}
+
+.fixed-top.fixed .main-sidebar,.fixed-top.fixed .content-wrapper{
+  padding-top:50px;
+}
+
+.fixed-top.fixed .main-header,.fixed-top.fixed .main-sidebar, .fixed-top.fixed .left-side {
+  position: fixed;
+}
 
 .content-wrapper{
   background: #f1f4f6;
@@ -327,6 +359,7 @@ a.disabled {
 .dropdown-menu{
   font-size: 12px;
   min-width: 50px;
+  border: 0;
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
