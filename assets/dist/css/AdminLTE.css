@@ -126,9 +126,9 @@ body {
     padding-top: 100px;
   }
 }
-.fixed.layout-boxed .wrapper {
+/* .fixed.layout-boxed .wrapper {
   max-width: 100%;
-}
+} */
 body.hold-transition .content-wrapper,
 body.hold-transition .right-side,
 body.hold-transition .main-footer,

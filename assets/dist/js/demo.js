@@ -55,11 +55,11 @@ $(function () {
           + "Layout Options"
           + "</h4>"
           //Fixed layout
-          + "<div class='form-group'>"
-          + "<label class='control-sidebar-subheading'>"
-          + "<input type='checkbox' data-layout='fixed' class='pull-right'/> "
-          + "固定布局"
-          + "</label>"
+          // + "<div class='form-group'>"
+          // + "<label class='control-sidebar-subheading'>"
+          // + "<input type='checkbox' data-layout='fixed' class='pull-right'/> "
+          // + "固定布局"
+          // + "</label>"
           //+ "<p>Activate the fixed layout. You can't use fixed and boxed layouts together</p>"
           + "</div>"
           //Fixed layout

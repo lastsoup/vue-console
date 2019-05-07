@@ -254,8 +254,8 @@ function _init() {
       var sidebar_height = $(".sidebar").height();
       //Set the min-height of the content and sidebar based on the
       //the height of the document.
-      if ($("body").hasClass("fixed")) {
-        $(".content-wrapper, .right-side").css('min-height', window_height - $('.main-footer').outerHeight());
+      if ($("body").hasClass("fixed-side")) {
+        //$(".content-wrapper, .right-side").css('min-height', window_height - $('.main-footer').outerHeight());
       } else {
         var postSetWidth;
         if (window_height >= sidebar_height) {
@@ -276,28 +276,33 @@ function _init() {
       }
     },
     fixSidebar: function () {
+      $(".sidebar").slimscroll({
+        height: ($(window).height() - $(".main-header").height()) + "px",
+        color: "rgba(0,0,0,0.2)",
+        size: "3px"
+      });
       //Make sure the body tag has the .fixed class
-      if (!$("body").hasClass("fixed")) {
-        if (typeof $.fn.slimScroll != 'undefined') {
-          $(".sidebar").slimScroll({destroy: true}).height("auto");
-        }
-        return;
-      } else if (typeof $.fn.slimScroll == 'undefined' && window.console) {
-        window.console.error("Error: the fixed layout requires the slimscroll plugin!");
-      }
+      // if (!$("body").hasClass("fixed")) {
+      //   if (typeof $.fn.slimScroll != 'undefined') {
+      //     $(".sidebar").slimScroll({destroy: true}).height("auto");
+      //   }
+      //   return;
+      // } else if (typeof $.fn.slimScroll == 'undefined' && window.console) {
+      //   window.console.error("Error: the fixed layout requires the slimscroll plugin!");
+      // }
       //Enable slimscroll for fixed layout
-      if ($.AdminLTE.options.sidebarSlimScroll) {
-        if (typeof $.fn.slimScroll != 'undefined') {
-          //Destroy if it exists
-          $(".sidebar").slimScroll({destroy: true}).height("auto");
-          //Add slimscroll
-          $(".sidebar").slimscroll({
-            height: ($(window).height() - $(".main-header").height()) + "px",
-            color: "rgba(0,0,0,0.2)",
-            size: "3px"
-          });
-        }
-      }
+      // if ($.AdminLTE.options.sidebarSlimScroll) {
+      //   if (typeof $.fn.slimScroll != 'undefined') {
+      //     //Destroy if it exists
+      //     $(".sidebar").slimScroll({destroy: true}).height("auto");
+      //     //Add slimscroll
+      //     $(".sidebar").slimscroll({
+      //       height: ($(window).height() - $(".main-header").height()) + "px",
+      //       color: "rgba(0,0,0,0.2)",
+      //       size: "3px"
+      //     });
+      //   }
+      // }
     }
   };
 
