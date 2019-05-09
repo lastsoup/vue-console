@@ -276,12 +276,16 @@ function _init() {
       }
     },
     fixSidebar: function () {
-      $(".sidebar").slimscroll({
-        height: ($(window).height() - $(".main-header").height()) + "px",
-        color: "rgba(0,0,0,0.2)",
-        size: "3px"
-      });
-      //Make sure the body tag has the .fixed class
+      if (typeof $.fn.slimScroll != 'undefined') {
+        $(".sidebar").slimScroll({destroy: true}).height("auto");
+        $(".sidebar").slimscroll({
+            height: ($(window).height() - $(".main-header").height()) + "px",
+            color: "rgba(0,0,0,0.2)",
+            size: "3px"
+        });
+      }
+
+      // //Make sure the body tag has the .fixed class
       // if (!$("body").hasClass("fixed")) {
       //   if (typeof $.fn.slimScroll != 'undefined') {
       //     $(".sidebar").slimScroll({destroy: true}).height("auto");
@@ -290,7 +294,7 @@ function _init() {
       // } else if (typeof $.fn.slimScroll == 'undefined' && window.console) {
       //   window.console.error("Error: the fixed layout requires the slimscroll plugin!");
       // }
-      //Enable slimscroll for fixed layout
+      // //Enable slimscroll for fixed layout
       // if ($.AdminLTE.options.sidebarSlimScroll) {
       //   if (typeof $.fn.slimScroll != 'undefined') {
       //     //Destroy if it exists

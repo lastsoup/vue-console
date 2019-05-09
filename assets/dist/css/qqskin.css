@@ -23,7 +23,7 @@ button, input, select {
   box-sizing: border-box;
 }
 
-body {
+body,html {
   font-size: 12px;
   -webkit-text-size-adjust:none;
   width:100%;
