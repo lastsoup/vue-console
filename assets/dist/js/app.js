@@ -276,14 +276,15 @@ function _init() {
       }
     },
     fixSidebar: function () {
-      if (typeof $.fn.slimScroll != 'undefined') {
-        $(".sidebar").slimScroll({destroy: true}).height("auto");
-        $(".sidebar").slimscroll({
-            height: ($(window).height() - $(".main-header").height()) + "px",
-            color: "rgba(0,0,0,0.2)",
-            size: "3px"
-        });
-      }
+      // if (typeof $.fn.slimScroll != 'undefined') {
+      //   $(".sidebar").slimScroll({destroy: true}).height("auto");
+      //   $(".sidebar").slimscroll({
+      //       height: ($(window).height() - $(".main-header").height()) + "px",
+      //       color: "rgba(0,0,0,0.2)",
+      //       size: "3px"
+      //   });
+      // }
+      //加载自定义滚动条（弃用slimscroll）
 
       // //Make sure the body tag has the .fixed class
       // if (!$("body").hasClass("fixed")) {
@@ -332,6 +333,8 @@ function _init() {
             $("body").removeClass('sidebar-collapse').trigger('expanded.pushMenu');
           } else {
             $("body").addClass('sidebar-collapse').trigger('collapsed.pushMenu');
+            //cqy显示悬浮菜单
+            //$.AdminLTE.layout.fixSidebar();
           }
         }
         //Handle sidebar push menu for small screens
