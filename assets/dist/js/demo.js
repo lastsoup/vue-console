@@ -66,7 +66,7 @@ $(function () {
           + "<div class='form-group'>"
           + "<label class='control-sidebar-subheading'>"
           + "<input type='checkbox' data-layout='fixed-top' class='pull-right'/> "
-          + "中间固定头部"
+          + "固定头部"
           + "</label>"
           //+ "<p>Activate the fixed layout. You can't use fixed and boxed layouts together</p>"
           + "</div>"
