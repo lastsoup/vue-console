@@ -242,10 +242,15 @@ function _init() {
       var _this = this;
       _this.fix();
       _this.fixSidebar();
-      $(window, ".wrapper").resize(function () {
-        _this.fix();
+      //cqy
+      $(window).resize(function() {
+        $(".sidebar").slimScroll({destroy: true});
         _this.fixSidebar();
-      });
+     });
+      // $(window, ".wrapper").resize(function () {
+      //   _this.fix();
+      //   _this.fixSidebar();
+      // });
     },
     fix: function () {
       //Get window height and the wrapper height
@@ -276,38 +281,17 @@ function _init() {
       }
     },
     fixSidebar: function () {
-      // if (typeof $.fn.slimScroll != 'undefined') {
-      //   $(".sidebar").slimScroll({destroy: true}).height("auto");
-      //   $(".sidebar").slimscroll({
-      //       height: ($(window).height() - $(".main-header").height()) + "px",
-      //       color: "rgba(0,0,0,0.2)",
-      //       size: "3px"
-      //   });
-      // }
-      //加载自定义滚动条（弃用slimscroll）
-
-      // //Make sure the body tag has the .fixed class
-      // if (!$("body").hasClass("fixed")) {
-      //   if (typeof $.fn.slimScroll != 'undefined') {
-      //     $(".sidebar").slimScroll({destroy: true}).height("auto");
-      //   }
-      //   return;
-      // } else if (typeof $.fn.slimScroll == 'undefined' && window.console) {
-      //   window.console.error("Error: the fixed layout requires the slimscroll plugin!");
-      // }
-      // //Enable slimscroll for fixed layout
-      // if ($.AdminLTE.options.sidebarSlimScroll) {
-      //   if (typeof $.fn.slimScroll != 'undefined') {
-      //     //Destroy if it exists
-      //     $(".sidebar").slimScroll({destroy: true}).height("auto");
-      //     //Add slimscroll
-      //     $(".sidebar").slimscroll({
-      //       height: ($(window).height() - $(".main-header").height()) + "px",
-      //       color: "rgba(0,0,0,0.2)",
-      //       size: "3px"
-      //     });
-      //   }
-      // }
+      //cqy 
+      if($("body").hasClass("fixed-top")||$("body").hasClass("fixed-side")){
+        $(".sidebar").slimscroll({
+          height: ($(window).height() - 50) + "px",
+          color: "#fff",
+          size: "3px"
+          });
+      }else{
+          $(".sidebar").slimScroll({destroy: true}).attr("style","");
+      }
+    
     }
   };
 
@@ -333,8 +317,6 @@ function _init() {
             $("body").removeClass('sidebar-collapse').trigger('expanded.pushMenu');
           } else {
             $("body").addClass('sidebar-collapse').trigger('collapsed.pushMenu');
-            //cqy显示悬浮菜单
-            //$.AdminLTE.layout.fixSidebar();
           }
         }
         //Handle sidebar push menu for small screens
@@ -513,9 +495,6 @@ function _init() {
       if ($("body").hasClass('layout-boxed')) {
         sidebar.css('position', 'absolute');
         sidebar.height($(".wrapper").height());
-        $(window).resize(function () {
-          _this._fix(sidebar);
-        });
       } else {
         sidebar.css({
           'position': 'fixed',
